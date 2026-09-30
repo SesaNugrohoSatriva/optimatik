@@ -114,9 +114,22 @@
                         <div class="panel-header">
                             <div>
                                 <div class="panel-title">Ringkasan Bulanan</div>
-                                <div class="panel-subtitle">Kinerja Januari - Juni</div>
+                                <div class="panel-subtitle">Kinerja Januari - Maret</div>
                             </div>
-                            <button class="panel-action active">Bulanan</button>
+                        </div>
+
+                        <div class="report-toolbar">
+                            <label class="report-filter" for="report-period">
+                                Periode
+                                <select id="report-period">
+                                    <option value="all">Semua bulan</option>
+                                    <option value="01">Januari</option>
+                                    <option value="02">Februari</option>
+                                    <option value="03">Maret</option>
+                                </select>
+                            </label>
+                            <span class="report-count" id="report-count" aria-live="polite">3 periode</span>
+                            <button class="report-download" id="download-report" type="button">Unduh CSV</button>
                         </div>
 
                         <div class="table-wrapper">
@@ -130,19 +143,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr data-month="01">
                                         <td class="batch">Jan</td>
                                         <td>200 pcs</td>
                                         <td>128 kWh</td>
                                         <td>96.1%</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-month="02">
                                         <td class="batch">Feb</td>
                                         <td>220 pcs</td>
                                         <td>131 kWh</td>
                                         <td>96.8%</td>
                                     </tr>
-                                    <tr>
+                                    <tr data-month="03">
                                         <td class="batch">Mar</td>
                                         <td>240 pcs</td>
                                         <td>136 kWh</td>
@@ -198,11 +211,39 @@
             });
         });
 
-        document.querySelectorAll('.panel-action').forEach((button) => {
-            button.addEventListener('click', () => {
-                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
-                button.classList.add('active');
+        const reportPeriod = document.querySelector('#report-period');
+        const reportRows = [...document.querySelectorAll('tbody tr[data-month]')];
+        const reportCount = document.querySelector('#report-count');
+
+        function filterReport() {
+            const selectedMonth = reportPeriod.value;
+            let visibleCount = 0;
+
+            reportRows.forEach((row) => {
+                const isVisible = selectedMonth === 'all' || row.dataset.month === selectedMonth;
+                row.hidden = !isVisible;
+                if (isVisible) visibleCount += 1;
             });
+
+            reportCount.textContent = `${visibleCount} periode`;
+        }
+
+        reportPeriod.addEventListener('change', filterReport);
+
+        document.querySelector('#download-report').addEventListener('click', () => {
+            const headers = [...document.querySelectorAll('thead th')].map((cell) => cell.innerText.trim());
+            const visibleRows = reportRows.filter((row) => !row.hidden);
+            const csvRows = [headers, ...visibleRows.map((row) => [...row.cells].map((cell) => cell.innerText.trim()))];
+            const csv = csvRows.map((row) => row.map((value) => `"${value.replaceAll('"', '""')}"`).join(',')).join('\r\n');
+            const blob = new Blob([`\ufeff${csv}`], { type: 'text/csv;charset=utf-8' });
+            const downloadUrl = URL.createObjectURL(blob);
+            const downloadLink = document.createElement('a');
+            const periodName = reportPeriod.value === 'all' ? 'semua-periode' : reportPeriod.selectedOptions[0].text.toLowerCase();
+
+            downloadLink.href = downloadUrl;
+            downloadLink.download = `laporan-optimatik-${periodName}.csv`;
+            downloadLink.click();
+            URL.revokeObjectURL(downloadUrl);
         });
     </script>
 </body>

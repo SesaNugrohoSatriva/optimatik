@@ -743,6 +743,61 @@ select {
     overflow-x: auto;
 }
 
+.report-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: -2px 0 12px;
+}
+
+.report-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 650;
+}
+
+.report-filter select {
+    height: 32px;
+    min-width: 130px;
+    padding: 0 9px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 10px;
+}
+
+.report-filter select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(22, 114, 184, 0.12);
+}
+
+.report-count {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.report-download {
+    min-height: 32px;
+    padding: 0 11px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.report-download:hover {
+    background: var(--dark);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -1269,6 +1324,10 @@ tbody tr:last-child td {
         align-items: stretch;
         flex-direction: column;
         gap: 12px;
+    }
+
+    .report-toolbar {
+        flex-wrap: wrap;
     }
 
     .control-field,
