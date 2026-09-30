@@ -13,8 +13,8 @@
         <aside class="sidebar">
             <div class="brand">
                 <div class="brand-name">OPTIMATIK</div>
-                <div class="brand-subtitle">Optimalisasi Batik</div>
-                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+                <div class="brand-subtitle">Produksi Robot</div>
+                <div class="brand-tagline">Robot Manufacturing<br>Energy & Cost Analytics</div>
             </div>
 
             <nav class="navigation">
@@ -66,10 +66,9 @@
             <header class="topbar">
                 <div>
                     <div class="eyebrow">Monitoring</div>
-                    <h1 class="page-title">Halaman 2 · Konsumsi Energi</h1>
+                    <h1 class="page-title">Monitoring Energi Mesin</h1>
                     <p class="page-description">
-                        Panel pembanding penggunaan energi, proses aktif, dan potensi penghematan
-                        untuk semua batch produksi yang sedang berjalan.
+                        Pantau daya, energi, status operasi, dan estimasi biaya listrik setiap mesin produksi.
                     </p>
                 </div>
 
@@ -82,29 +81,46 @@
                 </div>
             </header>
 
+            <section class="monitoring-controls panel">
+                <label class="control-field">
+                    <span>Mesin terpilih</span>
+                    <select id="machine-select" aria-label="Pilih mesin">
+                        <option value="press">Robot Arm Assembly R-06</option>
+                        <option value="cnc">Robot Welding Cell R-02</option>
+                        <option value="pump">CNC Machining Cell</option>
+                        <option value="conveyor">AGV Material Handler</option>
+                    </select>
+                </label>
+                <label class="control-field tariff-field">
+                    <span>Tarif listrik <small>Rp/kWh</small></span>
+                    <input id="tariff-input" type="number" min="0" step="1" value="1444.70" inputmode="decimal">
+                </label>
+                <div class="meter-status"><span class="live-dot"></span>Meter simulasi <strong id="meter-config">3 fase · 400 V · Modbus RTU</strong></div>
+            </section>
+
             <section class="kpi-grid">
                 <div class="kpi-card">
-                    <div class="kpi-label">Total konsumsi</div>
-                    <div class="kpi-value">261.8 <span class="kpi-unit">kWh</span></div>
-                    <div class="kpi-note positive">↑ 8,4% VS bulan lalu</div>
+                    <div class="kpi-label">Daya saat ini</div>
+                    <div class="kpi-value"><span id="power-value">18.6</span> <span class="kpi-unit">kW</span></div>
+                    <div class="kpi-note neutral" id="electrical-summary">Beban terukur · 3 fase · 400 V</div>
                 </div>
 
                 <div class="kpi-card">
-                    <div class="kpi-label">Efisiensi unit</div>
-                    <div class="kpi-value">1.62 <span class="kpi-unit">kWh/potong</span></div>
-                    <div class="kpi-note positive">↓ 5,3% dari baseline</div>
+                    <div class="kpi-label">Energi kumulatif hari ini</div>
+                    <div class="kpi-value"><span id="energy-value">126.4</span> <span class="kpi-unit">kWh</span></div>
+                    <div class="kpi-note neutral">Akumulasi sejak 00:00</div>
                 </div>
 
                 <div class="kpi-card">
-                    <div class="kpi-label">Potensi hemat</div>
-                    <div class="kpi-value">Rp 36,7 <span class="kpi-unit">k</span></div>
-                    <div class="kpi-note positive">Tersedia evaluasi</div>
+                    <div class="kpi-label">Estimasi biaya hari ini</div>
+                    <div class="kpi-value" id="cost-value">Rp 182.604</div>
+                    <div class="kpi-note neutral">Berdasarkan tarif yang dimasukkan</div>
                 </div>
 
                 <div class="kpi-card">
-                    <div class="kpi-label">Alarm aktif</div>
-                    <div class="kpi-value">03 <span class="kpi-unit">event</span></div>
-                    <div class="kpi-note negative">2 di antaranya perlu tindakan</div>
+                    <div class="kpi-label">Status operasi</div>
+                    <div class="kpi-value status-value"><span class="status-indicator"></span><span id="operation-value">Produksi</span></div>
+                    <div class="kpi-note neutral">Waktu operasi 6 jam 48 menit</div>
                 </div>
             </section>
 
@@ -113,54 +129,48 @@
                     <section class="panel">
                         <div class="panel-header">
                             <div>
-                                <div class="panel-title">Konsumsi Energi per Hari</div>
-                                <div class="panel-subtitle">Periode 7 hari terakhir</div>
+                                <div class="panel-title">Pola daya dan penggunaan energi</div>
+                                <div class="panel-subtitle">Distribusi status operasi mesin hari ini · kW</div>
                             </div>
-                            <button class="panel-action active">7 Hari</button>
+                            <button class="panel-action active">Hari ini</button>
                         </div>
 
                         <div class="chart-container">
                             <div class="chart">
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 42%;"></div>
-                                    <div class="chart-bar energy" style="height: 32%;"></div>
-                                    <span class="chart-label">Sen</span>
+                                    <div class="chart-bar" style="height: 42%;"></div><div class="chart-bar energy" style="height: 18%;"></div>
+                                    <span class="chart-label">06</span>
                                 </div>
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 56%;"></div>
-                                    <div class="chart-bar energy" style="height: 44%;"></div>
-                                    <span class="chart-label">Sel</span>
+                                    <div class="chart-bar" style="height: 56%;"></div><div class="chart-bar standby" style="height: 15%;"></div>
+                                    <span class="chart-label">08</span>
                                 </div>
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 48%;"></div>
-                                    <div class="chart-bar energy" style="height: 43%;"></div>
-                                    <span class="chart-label">Rab</span>
+                                    <div class="chart-bar" style="height: 48%;"></div><div class="chart-bar energy" style="height: 21%;"></div>
+                                    <span class="chart-label">10</span>
                                 </div>
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 68%;"></div>
-                                    <div class="chart-bar energy" style="height: 59%;"></div>
-                                    <span class="chart-label">Kam</span>
+                                    <div class="chart-bar" style="height: 68%;"></div><div class="chart-bar standby" style="height: 13%;"></div>
+                                    <span class="chart-label">12</span>
                                 </div>
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 73%;"></div>
-                                    <div class="chart-bar energy" style="height: 61%;"></div>
-                                    <span class="chart-label">Jum</span>
+                                    <div class="chart-bar" style="height: 73%;"></div><div class="chart-bar energy" style="height: 19%;"></div>
+                                    <span class="chart-label">14</span>
                                 </div>
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 79%;"></div>
-                                    <div class="chart-bar energy" style="height: 66%;"></div>
-                                    <span class="chart-label">Sab</span>
+                                    <div class="chart-bar" style="height: 79%;"></div><div class="chart-bar standby" style="height: 14%;"></div>
+                                    <span class="chart-label">16</span>
                                 </div>
                                 <div class="chart-column">
-                                    <div class="chart-bar" style="height: 88%;"></div>
-                                    <div class="chart-bar energy" style="height: 72%;"></div>
-                                    <span class="chart-label">Min</span>
+                                    <div class="chart-bar" style="height: 34%;"></div><div class="chart-bar stopped" style="height: 8%;"></div>
+                                    <span class="chart-label">18</span>
                                 </div>
                             </div>
 
                             <div class="legend">
-                                <div class="legend-item"><span class="legend-dot"></span>Output produksi</div>
-                                <div class="legend-item"><span class="legend-dot energy"></span>Konsumsi energi</div>
+                                <div class="legend-item"><span class="legend-dot"></span>Produksi</div>
+                                <div class="legend-item"><span class="legend-dot standby"></span>Menunggu</div>
+                                <div class="legend-item"><span class="legend-dot stopped"></span>Berhenti</div>
                             </div>
                         </div>
                     </section>
@@ -168,38 +178,38 @@
                     <section class="panel">
                         <div class="panel-header">
                             <div>
-                                <div class="panel-title">Alarm Sistem</div>
-                                <div class="panel-subtitle">Deteksi otomatis yang membutuhkan perhatian</div>
+                                <div class="panel-title">Pemakaian per status</div>
+                                <div class="panel-subtitle">Energi mesin terpilih hari ini</div>
                             </div>
-                            <button class="panel-action">Filter</button>
+                            <span class="panel-subtitle">kWh</span>
                         </div>
 
                         <div class="process-list">
                             <div class="process-item">
                                 <div class="process-number">01</div>
                                 <div>
-                                    <div class="process-name">Pelorodan</div>
-                                    <div class="process-detail">Pemanasan berlebih · 14% di atas standar</div>
+                                    <div class="process-name">Saat produksi</div>
+                                    <div class="process-detail">Motor dan beban utama aktif</div>
                                 </div>
-                                <div class="process-energy negative">+14%</div>
+                                <div class="process-energy" id="production-energy">98.2 kWh</div>
                             </div>
 
                             <div class="process-item">
                                 <div class="process-number">02</div>
                                 <div>
-                                    <div class="process-name">Pewarnaan</div>
-                                    <div class="process-detail">Durasi mesin tinggi · 18 menit lebih lama</div>
+                                    <div class="process-name">Saat menunggu</div>
+                                    <div class="process-detail">Mesin siap, beban siaga terukur</div>
                                 </div>
-                                <div class="process-energy negative">+9%</div>
+                                <div class="process-energy" id="standby-energy">21.6 kWh</div>
                             </div>
 
                             <div class="process-item">
                                 <div class="process-number">03</div>
                                 <div>
-                                    <div class="process-name">Presing</div>
-                                    <div class="process-detail">Operasi stabil · tidak ada keluhan</div>
+                                    <div class="process-name">Saat berhenti</div>
+                                    <div class="process-detail">Termasuk konsumsi standby di luar jadwal</div>
                                 </div>
-                                <div class="process-energy positive">Normal</div>
+                                <div class="process-energy" id="stopped-energy">6.6 kWh</div>
                             </div>
                         </div>
                     </section>
@@ -209,42 +219,42 @@
                     <section class="panel">
                         <div class="panel-header">
                             <div>
-                                <div class="panel-title">Perbandingan Mesin</div>
-                                <div class="panel-subtitle">Efisiensi tiap unit produksi</div>
+                                <div class="panel-title">Energi per mesin</div>
+                                <div class="panel-subtitle">Akumulasi hari ini · kWh</div>
                             </div>
                         </div>
 
                         <div class="energy-list">
                             <div class="energy-row">
                                 <div>
-                                    <div class="energy-name">Mesin 1 · Peleburan</div>
-                                    <div class="energy-bar"><div class="energy-fill" style="width: 74%;"></div></div>
+                                    <div class="energy-name">Robot Arm Assembly R-06</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 84%;"></div></div>
                                 </div>
-                                <div class="energy-value">74%</div>
+                                <div class="energy-value">126.4</div>
                             </div>
 
                             <div class="energy-row">
                                 <div>
-                                    <div class="energy-name">Mesin 2 · Pewarnaan</div>
-                                    <div class="energy-bar"><div class="energy-fill" style="width: 63%;"></div></div>
+                                    <div class="energy-name">Robot Welding Cell R-02</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 66%;"></div></div>
                                 </div>
-                                <div class="energy-value">63%</div>
+                                <div class="energy-value">98.7</div>
                             </div>
 
                             <div class="energy-row">
                                 <div>
-                                    <div class="energy-name">Mesin 3 · Pelorodan</div>
-                                    <div class="energy-bar"><div class="energy-fill" style="width: 82%;"></div></div>
+                                    <div class="energy-name">CNC Machining Cell</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 52%;"></div></div>
                                 </div>
-                                <div class="energy-value">82%</div>
+                                <div class="energy-value">76.2</div>
                             </div>
 
                             <div class="energy-row">
                                 <div>
-                                    <div class="energy-name">Mesin 4 · Pengeringan</div>
-                                    <div class="energy-bar"><div class="energy-fill" style="width: 58%;"></div></div>
+                                    <div class="energy-name">AGV Material Handler</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 38%;"></div></div>
                                 </div>
-                                <div class="energy-value">58%</div>
+                                <div class="energy-value">54.8</div>
                             </div>
                         </div>
                     </section>
@@ -252,27 +262,15 @@
                     <section class="panel">
                         <div class="panel-header">
                             <div>
-                                <div class="panel-title">Rekomendasi</div>
-                                <div class="panel-subtitle">Langkah penghematan hari ini</div>
+                                <div class="panel-title">Intensitas energi produk</div>
+                                <div class="panel-subtitle">Tersedia jika data output produksi dicatat</div>
                             </div>
                         </div>
 
                         <div class="cost-list">
-                            <div class="cost-row">
-                                <div class="cost-name">Optimasi beban mesin</div>
-                                <div class="cost-value">Rp12.400</div>
-                            </div>
-                            <div class="cost-row">
-                                <div class="cost-name">Pengaturan jam operasional</div>
-                                <div class="cost-value">Rp9.350</div>
-                            </div>
-                            <div class="cost-row">
-                                <div class="cost-name">Inspeksi kabel & motor</div>
-                                <div class="cost-value">Rp14.900</div>
-                            </div>
-                            <div class="cost-row cost-total">
-                                <div class="cost-name">Total potensi</div>
-                                <div class="cost-value">Rp36.650</div>
+                            <div class="production-intensity">
+                                <div class="intensity-mark">i</div>
+                                <p>Data jumlah produk baik belum tersedia untuk periode ini. Hubungkan keluaran produksi untuk melihat <strong>kWh per unit baik</strong> dan biaya energi per produk.</p>
                             </div>
                         </div>
                     </section>
@@ -303,6 +301,34 @@
                 button.classList.add('active');
             });
         });
+
+        const machineReadings = {
+            press: { power: 18.6, energy: 126.4, operation: 'Produksi', system: '3 fase · 400 V · Modbus RTU', states: [98.2, 21.6, 6.6] },
+            cnc: { power: 14.2, energy: 98.7, operation: 'Produksi', system: '3 fase · 400 V · Modbus RTU', states: [82.1, 12.4, 4.2] },
+            pump: { power: 9.8, energy: 76.2, operation: 'Menunggu', system: '3 fase · 400 V · Modbus RTU', states: [48.4, 20.3, 7.5] },
+            conveyor: { power: 6.4, energy: 54.8, operation: 'Berhenti', system: '1 fase · 230 V · Modbus RTU', states: [36.2, 11.8, 6.8] }
+        };
+        const machineSelect = document.querySelector('#machine-select');
+        const tariffInput = document.querySelector('#tariff-input');
+
+        function updateMachineSummary() {
+            const reading = machineReadings[machineSelect.value];
+            const tariff = Math.max(0, Number(tariffInput.value) || 0);
+            document.querySelector('#power-value').textContent = reading.power.toFixed(1);
+            document.querySelector('#energy-value').textContent = reading.energy.toFixed(1);
+            document.querySelector('#operation-value').textContent = reading.operation;
+            document.querySelector('#cost-value').textContent = `Rp ${Math.round(reading.energy * tariff).toLocaleString('id-ID')}`;
+            document.querySelector('#production-energy').textContent = `${reading.states[0].toFixed(1)} kWh`;
+            document.querySelector('#standby-energy').textContent = `${reading.states[1].toFixed(1)} kWh`;
+            document.querySelector('#stopped-energy').textContent = `${reading.states[2].toFixed(1)} kWh`;
+            document.querySelector('.status-indicator').className = `status-indicator ${reading.operation.toLowerCase()}`;
+            document.querySelector('#meter-config').textContent = reading.system;
+            document.querySelector('#electrical-summary').textContent = `Beban terukur · ${reading.system.split(' · ').slice(0, 2).join(' · ')}`;
+        }
+
+        machineSelect.addEventListener('change', updateMachineSummary);
+        tariffInput.addEventListener('input', updateMachineSummary);
+        updateMachineSummary();
     </script>
 </body>
 
