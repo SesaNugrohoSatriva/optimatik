@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimatik — Laporan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-name">OPTIMATIK</div>
+                <div class="brand-subtitle">Optimalisasi Batik</div>
+                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-title">Workspace</div>
+
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link active">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">SYSTEM STATUS</div>
+                <div class="sidebar-bottom-value">● Prototype Mode</div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">Executive</div>
+                    <h1 class="page-title">Laporan</h1>
+                    <p class="page-description">
+                        Ringkasan performa produksi, energi, inventori, dan kualitas dalam satu tampilan.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <div class="avatar">LP</div>
+                    <div>
+                        <div class="user-name">Hendra Putra</div>
+                        <div class="user-role">Operations Lead</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Performa total</div>
+                    <div class="kpi-value">91.2 <span class="kpi-unit">%</span></div>
+                    <div class="kpi-note positive">Tinggi dari target 88%</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Produksi</div>
+                    <div class="kpi-value">1.280 <span class="kpi-unit">pcs</span></div>
+                    <div class="kpi-note positive">Naik 11% bulan ini</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Penghematan energi</div>
+                    <div class="kpi-value">Rp 40,5 <span class="kpi-unit">k</span></div>
+                    <div class="kpi-note positive">Optimalisasi aktif</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Kualitas</div>
+                    <div class="kpi-value">97.3 <span class="kpi-unit">%</span></div>
+                    <div class="kpi-note neutral">Tetap stabil</div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Ringkasan Bulanan</div>
+                                <div class="panel-subtitle">Kinerja Januari - Juni</div>
+                            </div>
+                            <button class="panel-action active">Bulanan</button>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Periode</th>
+                                        <th>Output</th>
+                                        <th>Energi</th>
+                                        <th>Kualitas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="batch">Jan</td>
+                                        <td>200 pcs</td>
+                                        <td>128 kWh</td>
+                                        <td>96.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">Feb</td>
+                                        <td>220 pcs</td>
+                                        <td>131 kWh</td>
+                                        <td>96.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">Mar</td>
+                                        <td>240 pcs</td>
+                                        <td>136 kWh</td>
+                                        <td>97.4%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Action Items</div>
+                                <div class="panel-subtitle">Prioritas eksekutif</div>
+                            </div>
+                        </div>
+
+                        <div class="cost-list">
+                            <div class="cost-row">
+                                <div class="cost-name">Optimisasi pelorodan</div>
+                                <div class="cost-value">High</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Restock resin lilin</div>
+                                <div class="cost-value">Medium</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Peningkatan QC sampling</div>
+                                <div class="cost-value">Medium</div>
+                            </div>
+                            <div class="cost-row cost-total">
+                                <div class="cost-name">Status</div>
+                                <div class="cost-value">On Track</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (window.location.pathname.endsWith(href)) link.classList.add('active');
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

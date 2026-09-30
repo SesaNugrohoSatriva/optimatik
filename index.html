@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Optimatik — Optimalisasi Batik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-name">
+                    OPTIMATIK
+                </div>
+
+                <div class="brand-subtitle">
+                    Optimalisasi Batik
+                </div>
+
+                <div class="brand-tagline">
+                    Integrated Production<br>
+                    Energy & Cost Management
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <div class="nav-title">
+                    Workspace
+                </div>
+
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">
+                    SYSTEM STATUS
+                </div>
+
+                <div class="sidebar-bottom-value">
+                    ● Prototype Mode
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div>
+                    <div class="eyebrow">
+                        Enterprise Resource Planning
+                    </div>
+
+                    <h1 class="page-title">
+                        Dashboard Optimatik
+                    </h1>
+
+                    <p class="page-description">
+                        Sistem terintegrasi untuk memantau proses produksi,
+                        konsumsi energi, dan biaya produksi IKM batik.
+                    </p>
+                </div>
+
+                <div class="user-area">
+
+                    <div class="avatar">
+                        IK
+                    </div>
+
+                    <div>
+                        <div class="user-name">
+                            Admin IKM
+                        </div>
+
+                        <div class="user-role">
+                            Production Manager
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- KPI -->
+            <section class="kpi-grid">
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Produksi Bulan Ini
+                    </div>
+
+                    <div class="kpi-value">
+                        486
+                        <span class="kpi-unit">
+                            kain
+                        </span>
+                    </div>
+
+                    <div class="kpi-note positive">
+                        ↑ 12,4% dari bulan lalu
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Konsumsi Energi
+                    </div>
+
+                    <div class="kpi-value">
+                        1.284
+                        <span class="kpi-unit">
+                            kWh
+                        </span>
+                    </div>
+
+                    <div class="kpi-note negative">
+                        ↑ 4,2% dari bulan lalu
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Biaya Energi
+                    </div>
+
+                    <div class="kpi-value">
+                        Rp1,92 jt
+                    </div>
+
+                    <div class="kpi-note neutral">
+                        Rp3.950 / kain
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Efisiensi Produksi
+                    </div>
+
+                    <div class="kpi-value">
+                        87,6%
+                    </div>
+
+                    <div class="kpi-note positive">
+                        ↑ 6,1% dari standar
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTENT -->
+            <div class="content-grid">
+
+                <!-- LEFT COLUMN -->
+                <div>
+
+                    <!-- CHART -->
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <div class="panel-title">
+                                    Produksi vs Konsumsi Energi
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Perbandingan performa enam bulan terakhir
+                                </div>
+                            </div>
+
+                            <button class="panel-action">
+                                6 Bulan
+                            </button>
+
+                        </div>
+
+
+                        <div class="chart-container">
+
+                            <div class="chart">
+
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 45%;"></div>
+                                    <div class="chart-bar energy" style="height: 38%;"></div>
+                                    <span class="chart-label">Apr</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 53%;"></div>
+                                    <div class="chart-bar energy" style="height: 43%;"></div>
+                                    <span class="chart-label">Mei</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 60%;"></div>
+                                    <div class="chart-bar energy" style="height: 49%;"></div>
+                                    <span class="chart-label">Jun</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 67%;"></div>
+                                    <div class="chart-bar energy" style="height: 56%;"></div>
+                                    <span class="chart-label">Jul</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 76%;"></div>
+                                    <div class="chart-bar energy" style="height: 67%;"></div>
+                                    <span class="chart-label">Agu</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 88%;"></div>
+                                    <div class="chart-bar energy" style="height: 73%;"></div>
+                                    <span class="chart-label">Sep</span>
+                                </div>
+
+                            </div>
+
+                            <div class="legend">
+
+                                <div class="legend-item">
+                                    <span class="legend-dot"></span>
+                                    Output produksi
+                                </div>
+
+                                <div class="legend-item">
+                                    <span class="legend-dot energy"></span>
+                                    Konsumsi energi
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PRODUCTION ORDER -->
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <div class="panel-title">
+                                    Production Order Terbaru
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Status batch produksi aktif
+                                </div>
+                            </div>
+
+                            <button class="panel-action">
+                                Lihat Semua
+                            </button>
+
+                        </div>
+
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+                                    <tr>
+                                        <th>Batch</th>
+                                        <th>Produk</th>
+                                        <th>Qty</th>
+                                        <th>Energi</th>
+                                        <th>HPP / Unit</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td class="batch">
+                                            PO-0265
+                                        </td>
+
+                                        <td>
+                                            Batik Tulis Parang
+                                        </td>
+
+                                        <td>
+                                            20
+                                        </td>
+
+                                        <td>
+                                            48,2 kWh
+                                        </td>
+
+                                        <td>
+                                            Rp118.500
+                                        </td>
+
+                                        <td>
+                                            <span class="status done">
+                                                Selesai
+                                            </span>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="batch">
+                                            PO-0266
+                                        </td>
+
+                                        <td>
+                                            Batik Cap Kawung
+                                        </td>
+
+                                        <td>
+                                            35
+                                        </td>
+
+                                        <td>
+                                            61,7 kWh
+                                        </td>
+
+                                        <td>
+                                            Rp86.200
+                                        </td>
+
+                                        <td>
+                                            <span class="status process">
+                                                Produksi
+                                            </span>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="batch">
+                                            PO-0267
+                                        </td>
+
+                                        <td>
+                                            Batik Tulis Sekar
+                                        </td>
+
+                                        <td>
+                                            15
+                                        </td>
+
+                                        <td>
+                                            —
+                                        </td>
+
+                                        <td>
+                                            Rp125.000
+                                        </td>
+
+                                        <td>
+                                            <span class="status planned">
+                                                Terencana
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ENERGY BY PROCESS -->
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <div class="panel-title">
+                                    Konsumsi Energi per Proses
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Distribusi energi pada PO-0266
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="energy-list">
+
+                            <div class="energy-row">
+
+                                <div>
+                                    <div class="energy-name">
+                                        Persiapan kain
+                                    </div>
+
+                                    <div class="energy-bar">
+                                        <div class="energy-fill" style="width: 18%;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="energy-value">
+                                    4,2 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="energy-row">
+
+                                <div>
+                                    <div class="energy-name">
+                                        Pencapan
+                                    </div>
+
+                                    <div class="energy-bar">
+                                        <div class="energy-fill" style="width: 30%;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="energy-value">
+                                    8,6 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="energy-row">
+
+                                <div>
+                                    <div class="energy-name">
+                                        Pewarnaan
+                                    </div>
+
+                                    <div class="energy-bar">
+                                        <div class="energy-fill" style="width: 59%;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="energy-value">
+                                    18,1 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="energy-row">
+
+                                <div>
+                                    <div class="energy-name">
+                                        Pelorodan
+                                    </div>
+
+                                    <div class="energy-bar">
+                                        <div class="energy-fill" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="energy-value">
+                                    30,8 kWh
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+                <div>
+
+                    <!-- ACTIVE BATCH -->
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <div class="panel-title">
+                                    Indikator Efisiensi
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Batch aktif · PO-0266
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="metric-grid">
+
+                            <div class="metric">
+
+                                <div class="metric-label">
+                                    Output
+                                </div>
+
+                                <div class="metric-value">
+                                    35 kain
+                                </div>
+
+                            </div>
+
+
+                            <div class="metric">
+
+                                <div class="metric-label">
+                                    Energi
+                                </div>
+
+                                <div class="metric-value">
+                                    61,7 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="metric">
+
+                                <div class="metric-label">
+                                    Energi / kain
+                                </div>
+
+                                <div class="metric-value">
+                                    1,76 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="metric">
+
+                                <div class="metric-label">
+                                    Biaya energi
+                                </div>
+
+                                <div class="metric-value">
+                                    Rp92,5k
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="optimization-alert">
+
+                            <div class="optimization-alert-title">
+                                Potensi optimasi terdeteksi
+                            </div>
+
+                            <div class="optimization-alert-text">
+                                Konsumsi energi proses pelorodan
+                                berada 14% di atas standar.
+                                Sistem menandai proses tersebut
+                                untuk evaluasi waktu pemanasan
+                                dan penggunaan peralatan.
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PRODUCTION PROCESS -->
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <div class="panel-title">
+                                    Proses Produksi
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    PO-0266 · Batik Cap Kawung
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="process-list">
+
+                            <div class="process-item">
+
+                                <div class="process-number">
+                                    01
+                                </div>
+
+                                <div>
+                                    <div class="process-name">
+                                        Persiapan kain
+                                    </div>
+
+                                    <div class="process-detail">
+                                        25 menit · selesai
+                                    </div>
+                                </div>
+
+                                <div class="process-energy">
+                                    4,2 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="process-item">
+
+                                <div class="process-number">
+                                    02
+                                </div>
+
+                                <div>
+                                    <div class="process-name">
+                                        Pencapan
+                                    </div>
+
+                                    <div class="process-detail">
+                                        48 menit · selesai
+                                    </div>
+                                </div>
+
+                                <div class="process-energy">
+                                    8,6 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="process-item">
+
+                                <div class="process-number">
+                                    03
+                                </div>
+
+                                <div>
+                                    <div class="process-name">
+                                        Pewarnaan
+                                    </div>
+
+                                    <div class="process-detail">
+                                        65 menit · berjalan
+                                    </div>
+                                </div>
+
+                                <div class="process-energy">
+                                    18,1 kWh
+                                </div>
+
+                            </div>
+
+
+                            <div class="process-item">
+
+                                <div class="process-number">
+                                    04
+                                </div>
+
+                                <div>
+                                    <div class="process-name">
+                                        Pelorodan
+                                    </div>
+
+                                    <div class="process-detail">
+                                        Target 40 menit
+                                    </div>
+                                </div>
+
+                                <div class="process-energy">
+                                    30,8 kWh
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- COSTING -->
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <div class="panel-title">
+                                    Costing Produksi
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    PO-0266 · Estimasi HPP
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="cost-list">
+
+                            <div class="cost-row">
+
+                                <div class="cost-name">
+                                    Bahan baku
+                                </div>
+
+                                <div class="cost-value">
+                                    Rp1.890.000
+                                </div>
+
+                            </div>
+
+
+                            <div class="cost-row">
+
+                                <div class="cost-name">
+                                    Tenaga kerja
+                                </div>
+
+                                <div class="cost-value">
+                                    Rp780.000
+                                </div>
+
+                            </div>
+
+
+                            <div class="cost-row">
+
+                                <div class="cost-name">
+                                    Energi
+                                </div>
+
+                                <div class="cost-value">
+                                    Rp92.550
+                                </div>
+
+                            </div>
+
+
+                            <div class="cost-row">
+
+                                <div class="cost-name">
+                                    Overhead
+                                </div>
+
+                                <div class="cost-value">
+                                    Rp255.450
+                                </div>
+
+                            </div>
+
+
+                            <div class="cost-row cost-total">
+
+                                <div class="cost-name">
+                                    Total HPP
+                                </div>
+
+                                <div class="cost-value">
+                                    Rp3.018.000
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

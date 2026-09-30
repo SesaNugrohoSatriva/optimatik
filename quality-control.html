@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimatik — Quality Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-name">OPTIMATIK</div>
+                <div class="brand-subtitle">Optimalisasi Batik</div>
+                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-title">Workspace</div>
+
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link active">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">SYSTEM STATUS</div>
+                <div class="sidebar-bottom-value">● Prototype Mode</div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">Assurance</div>
+                    <h1 class="page-title">Quality Control</h1>
+                    <p class="page-description">
+                        Memantau tingkat cacat, kepatuhan spek, dan hasil inspeksi produk jadi.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <div class="avatar">QC</div>
+                    <div>
+                        <div class="user-name">Andi Kurnia</div>
+                        <div class="user-role">QC Supervisor</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Defect rate</div>
+                    <div class="kpi-value">2.7 <span class="kpi-unit">%</span></div>
+                    <div class="kpi-note positive">Turun 1.4% bulan ini</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Inspeksi hari ini</div>
+                    <div class="kpi-value">185 <span class="kpi-unit">lot</span></div>
+                    <div class="kpi-note neutral">94% lolos</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Cacat utama</div>
+                    <div class="kpi-value">03 <span class="kpi-unit">jenis</span></div>
+                    <div class="kpi-note negative">Warna tidak konsisten</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Audit</div>
+                    <div class="kpi-value">A <span class="kpi-unit">grade</span></div>
+                    <div class="kpi-note positive">Sesuai SOP</div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Hasil Inspeksi</div>
+                                <div class="panel-subtitle">Kelompok item hari ini</div>
+                            </div>
+                            <button class="panel-action active">Hari ini</button>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Lot</th>
+                                        <th>Jenis</th>
+                                        <th>Ketepatan</th>
+                                        <th>Hasil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="batch">QC-110</td>
+                                        <td>Batik Tulis</td>
+                                        <td>96%</td>
+                                        <td><span class="status done">Lolos</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">QC-111</td>
+                                        <td>Batik Cap</td>
+                                        <td>91%</td>
+                                        <td><span class="status process">Rework</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">QC-112</td>
+                                        <td>Batik Soga</td>
+                                        <td>98%</td>
+                                        <td><span class="status done">Lolos</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Poin Cacat</div>
+                                <div class="panel-subtitle">Top issue yang teridentifikasi</div>
+                            </div>
+                        </div>
+
+                        <div class="cost-list">
+                            <div class="cost-row">
+                                <div class="cost-name">Warna tidak seragam</div>
+                                <div class="cost-value">42%</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Lilin terlalu tebal</div>
+                                <div class="cost-value">31%</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Pola kurang presisi</div>
+                                <div class="cost-value">18%</div>
+                            </div>
+                            <div class="cost-row cost-total">
+                                <div class="cost-name">Tingkat kerusakan</div>
+                                <div class="cost-value">2.7%</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (window.location.pathname.endsWith(href)) link.classList.add('active');
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimatik — Production Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-name">OPTIMATIK</div>
+                <div class="brand-subtitle">Optimalisasi Batik</div>
+                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-title">Workspace</div>
+
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link active">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">SYSTEM STATUS</div>
+                <div class="sidebar-bottom-value">● Prototype Mode</div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">Operasional</div>
+                    <h1 class="page-title">Production Order</h1>
+                    <p class="page-description">
+                        Kelola jadwal produksi, kapasitas mesin, dan status order secara real time.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <div class="avatar">PO</div>
+                    <div>
+                        <div class="user-name">Sari Wulandari</div>
+                        <div class="user-role">Production Planner</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Order aktif</div>
+                    <div class="kpi-value">18 <span class="kpi-unit">batch</span></div>
+                    <div class="kpi-note positive">↑ 2 batch minggu ini</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Rasio on-time</div>
+                    <div class="kpi-value">94.8 <span class="kpi-unit">%</span></div>
+                    <div class="kpi-note positive">Naik 3,1% dari bulan lalu</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Kapasitas mesin</div>
+                    <div class="kpi-value">82 <span class="kpi-unit">%</span></div>
+                    <div class="kpi-note neutral">Mendekati optimal</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Keterlambatan</div>
+                    <div class="kpi-value">02 <span class="kpi-unit">order</span></div>
+                    <div class="kpi-note negative">Perlu penjadwalan ulang</div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Order Terbaru</div>
+                                <div class="panel-subtitle">Status aktif per hari ini</div>
+                            </div>
+                            <button class="panel-action active">Semua</button>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Produk</th>
+                                        <th>Qty</th>
+                                        <th>Target</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="batch">PO-0271</td>
+                                        <td>Batik Tulis Sidomukti</td>
+                                        <td>25 pcs</td>
+                                        <td>2 hari</td>
+                                        <td><span class="status process">Produksi</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">PO-0272</td>
+                                        <td>Batik Cap Sogan</td>
+                                        <td>40 pcs</td>
+                                        <td>3 hari</td>
+                                        <td><span class="status done">Selesai</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">PO-0273</td>
+                                        <td>Batik Tulis Parang</td>
+                                        <td>18 pcs</td>
+                                        <td>2 hari</td>
+                                        <td><span class="status planned">Terencana</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Jadwal Produksi</div>
+                                <div class="panel-subtitle">Urutan prioritas hari ini</div>
+                            </div>
+                        </div>
+
+                        <div class="process-list">
+                            <div class="process-item">
+                                <div class="process-number">01</div>
+                                <div>
+                                    <div class="process-name">PO-0271 · Sidomukti</div>
+                                    <div class="process-detail">Mesin 2 · 08:00 - 12:00</div>
+                                </div>
+                                <div class="process-energy">On Track</div>
+                            </div>
+
+                            <div class="process-item">
+                                <div class="process-number">02</div>
+                                <div>
+                                    <div class="process-name">PO-0274 · Mega Mendung</div>
+                                    <div class="process-detail">Mesin 3 · 12:30 - 15:30</div>
+                                </div>
+                                <div class="process-energy">Ready</div>
+                            </div>
+
+                            <div class="process-item">
+                                <div class="process-number">03</div>
+                                <div>
+                                    <div class="process-name">PO-0276 · Kawung</div>
+                                    <div class="process-detail">Mesin 1 · 16:00 - 18:00</div>
+                                </div>
+                                <div class="process-energy">Pending</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (window.location.pathname.endsWith(href)) link.classList.add('active');
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

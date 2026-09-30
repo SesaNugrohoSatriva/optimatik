@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimatik — Persediaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-name">OPTIMATIK</div>
+                <div class="brand-subtitle">Optimalisasi Batik</div>
+                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-title">Workspace</div>
+
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link active">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">SYSTEM STATUS</div>
+                <div class="sidebar-bottom-value">● Prototype Mode</div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">Logistik</div>
+                    <h1 class="page-title">Persediaan</h1>
+                    <p class="page-description">
+                        Pantau stok bahan baku, produk setengah jadi, dan kebutuhan restock secara tepat waktu.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <div class="avatar">PS</div>
+                    <div>
+                        <div class="user-name">Dewi Lestari</div>
+                        <div class="user-role">Inventory Control</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Stok bahan utama</div>
+                    <div class="kpi-value">1.240 <span class="kpi-unit">unit</span></div>
+                    <div class="kpi-note positive">Cukup untuk 16 hari</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Restock</div>
+                    <div class="kpi-value">04 <span class="kpi-unit">item</span></div>
+                    <div class="kpi-note neutral">Target minggu depan</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Material kritis</div>
+                    <div class="kpi-value">02 <span class="kpi-unit">jenis</span></div>
+                    <div class="kpi-note negative">Perhatian tinggi</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Turnover</div>
+                    <div class="kpi-value">5.6 <span class="kpi-unit">x</span></div>
+                    <div class="kpi-note positive">Meningkat 0.8x</div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Stok Bahan Baku</div>
+                                <div class="panel-subtitle">Status saat ini</div>
+                            </div>
+                            <button class="panel-action active">Hari ini</button>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Stok</th>
+                                        <th>Min</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="batch">Kain primisima</td>
+                                        <td>430 m</td>
+                                        <td>200 m</td>
+                                        <td><span class="status done">Aman</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">Pewarna alami</td>
+                                        <td>180 kg</td>
+                                        <td>150 kg</td>
+                                        <td><span class="status process">Monitor</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="batch">Resin lilin</td>
+                                        <td>68 kg</td>
+                                        <td>120 kg</td>
+                                        <td><span class="status planned">Restock</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Kebutuhan Pembelian</div>
+                                <div class="panel-subtitle">Prioritas minggu depan</div>
+                            </div>
+                        </div>
+
+                        <div class="cost-list">
+                            <div class="cost-row">
+                                <div class="cost-name">Resin lilin</div>
+                                <div class="cost-value">150 kg</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Bahan warna merah</div>
+                                <div class="cost-value">80 kg</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Kain mori</div>
+                                <div class="cost-value">200 rol</div>
+                            </div>
+                            <div class="cost-row cost-total">
+                                <div class="cost-name">Estimasi total</div>
+                                <div class="cost-value">Rp 31,6 jt</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (window.location.pathname.endsWith(href)) link.classList.add('active');
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

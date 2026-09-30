@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimatik — Monitoring Energi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-name">OPTIMATIK</div>
+                <div class="brand-subtitle">Optimalisasi Batik</div>
+                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-title">Workspace</div>
+
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link active">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">SYSTEM STATUS</div>
+                <div class="sidebar-bottom-value">● Prototype Mode</div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">Monitoring</div>
+                    <h1 class="page-title">Halaman 2 · Konsumsi Energi</h1>
+                    <p class="page-description">
+                        Panel pembanding penggunaan energi, proses aktif, dan potensi penghematan
+                        untuk semua batch produksi yang sedang berjalan.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <div class="avatar">AA</div>
+                    <div>
+                        <div class="user-name">Arif Rahman</div>
+                        <div class="user-role">Ops Manager</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Total konsumsi</div>
+                    <div class="kpi-value">261.8 <span class="kpi-unit">kWh</span></div>
+                    <div class="kpi-note positive">↑ 8,4% VS bulan lalu</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Efisiensi unit</div>
+                    <div class="kpi-value">1.62 <span class="kpi-unit">kWh/potong</span></div>
+                    <div class="kpi-note positive">↓ 5,3% dari baseline</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Potensi hemat</div>
+                    <div class="kpi-value">Rp 36,7 <span class="kpi-unit">k</span></div>
+                    <div class="kpi-note positive">Tersedia evaluasi</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Alarm aktif</div>
+                    <div class="kpi-value">03 <span class="kpi-unit">event</span></div>
+                    <div class="kpi-note negative">2 di antaranya perlu tindakan</div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Konsumsi Energi per Hari</div>
+                                <div class="panel-subtitle">Periode 7 hari terakhir</div>
+                            </div>
+                            <button class="panel-action active">7 Hari</button>
+                        </div>
+
+                        <div class="chart-container">
+                            <div class="chart">
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 42%;"></div>
+                                    <div class="chart-bar energy" style="height: 32%;"></div>
+                                    <span class="chart-label">Sen</span>
+                                </div>
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 56%;"></div>
+                                    <div class="chart-bar energy" style="height: 44%;"></div>
+                                    <span class="chart-label">Sel</span>
+                                </div>
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 48%;"></div>
+                                    <div class="chart-bar energy" style="height: 43%;"></div>
+                                    <span class="chart-label">Rab</span>
+                                </div>
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 68%;"></div>
+                                    <div class="chart-bar energy" style="height: 59%;"></div>
+                                    <span class="chart-label">Kam</span>
+                                </div>
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 73%;"></div>
+                                    <div class="chart-bar energy" style="height: 61%;"></div>
+                                    <span class="chart-label">Jum</span>
+                                </div>
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 79%;"></div>
+                                    <div class="chart-bar energy" style="height: 66%;"></div>
+                                    <span class="chart-label">Sab</span>
+                                </div>
+                                <div class="chart-column">
+                                    <div class="chart-bar" style="height: 88%;"></div>
+                                    <div class="chart-bar energy" style="height: 72%;"></div>
+                                    <span class="chart-label">Min</span>
+                                </div>
+                            </div>
+
+                            <div class="legend">
+                                <div class="legend-item"><span class="legend-dot"></span>Output produksi</div>
+                                <div class="legend-item"><span class="legend-dot energy"></span>Konsumsi energi</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Alarm Sistem</div>
+                                <div class="panel-subtitle">Deteksi otomatis yang membutuhkan perhatian</div>
+                            </div>
+                            <button class="panel-action">Filter</button>
+                        </div>
+
+                        <div class="process-list">
+                            <div class="process-item">
+                                <div class="process-number">01</div>
+                                <div>
+                                    <div class="process-name">Pelorodan</div>
+                                    <div class="process-detail">Pemanasan berlebih · 14% di atas standar</div>
+                                </div>
+                                <div class="process-energy negative">+14%</div>
+                            </div>
+
+                            <div class="process-item">
+                                <div class="process-number">02</div>
+                                <div>
+                                    <div class="process-name">Pewarnaan</div>
+                                    <div class="process-detail">Durasi mesin tinggi · 18 menit lebih lama</div>
+                                </div>
+                                <div class="process-energy negative">+9%</div>
+                            </div>
+
+                            <div class="process-item">
+                                <div class="process-number">03</div>
+                                <div>
+                                    <div class="process-name">Presing</div>
+                                    <div class="process-detail">Operasi stabil · tidak ada keluhan</div>
+                                </div>
+                                <div class="process-energy positive">Normal</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Perbandingan Mesin</div>
+                                <div class="panel-subtitle">Efisiensi tiap unit produksi</div>
+                            </div>
+                        </div>
+
+                        <div class="energy-list">
+                            <div class="energy-row">
+                                <div>
+                                    <div class="energy-name">Mesin 1 · Peleburan</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 74%;"></div></div>
+                                </div>
+                                <div class="energy-value">74%</div>
+                            </div>
+
+                            <div class="energy-row">
+                                <div>
+                                    <div class="energy-name">Mesin 2 · Pewarnaan</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 63%;"></div></div>
+                                </div>
+                                <div class="energy-value">63%</div>
+                            </div>
+
+                            <div class="energy-row">
+                                <div>
+                                    <div class="energy-name">Mesin 3 · Pelorodan</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 82%;"></div></div>
+                                </div>
+                                <div class="energy-value">82%</div>
+                            </div>
+
+                            <div class="energy-row">
+                                <div>
+                                    <div class="energy-name">Mesin 4 · Pengeringan</div>
+                                    <div class="energy-bar"><div class="energy-fill" style="width: 58%;"></div></div>
+                                </div>
+                                <div class="energy-value">58%</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Rekomendasi</div>
+                                <div class="panel-subtitle">Langkah penghematan hari ini</div>
+                            </div>
+                        </div>
+
+                        <div class="cost-list">
+                            <div class="cost-row">
+                                <div class="cost-name">Optimasi beban mesin</div>
+                                <div class="cost-value">Rp12.400</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Pengaturan jam operasional</div>
+                                <div class="cost-value">Rp9.350</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Inspeksi kabel & motor</div>
+                                <div class="cost-value">Rp14.900</div>
+                            </div>
+                            <div class="cost-row cost-total">
+                                <div class="cost-name">Total potensi</div>
+                                <div class="cost-value">Rp36.650</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

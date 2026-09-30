@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimatik — Costing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-name">OPTIMATIK</div>
+                <div class="brand-subtitle">Optimalisasi Batik</div>
+                <div class="brand-tagline">Integrated Production<br>Energy & Cost Management</div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-title">Workspace</div>
+
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="production-order.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Production Order</span>
+                </a>
+
+                <a href="page2.html" class="nav-link">
+                    <span class="nav-icon">◉</span>
+                    <span>Monitoring Energi</span>
+                </a>
+
+                <a href="costing.html" class="nav-link active">
+                    <span class="nav-icon">◌</span>
+                    <span>Costing</span>
+                </a>
+
+                <a href="persediaan.html" class="nav-link">
+                    <span class="nav-icon">□</span>
+                    <span>Persediaan</span>
+                </a>
+
+                <a href="quality-control.html" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Quality Control</span>
+                </a>
+
+                <a href="laporan.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-label">SYSTEM STATUS</div>
+                <div class="sidebar-bottom-value">● Prototype Mode</div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">Finance</div>
+                    <h1 class="page-title">Costing Produksi</h1>
+                    <p class="page-description">
+                        Analisis biaya bahan baku, tenaga kerja, energi, dan overhead per batch produksi.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <div class="avatar">CP</div>
+                    <div>
+                        <div class="user-name">Rina Susanti</div>
+                        <div class="user-role">Cost Controller</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Biaya bulan ini</div>
+                    <div class="kpi-value">Rp 84,6 <span class="kpi-unit">jt</span></div>
+                    <div class="kpi-note positive">↓ 3,2% dari target</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">HPP rata-rata</div>
+                    <div class="kpi-value">Rp 162.8 <span class="kpi-unit">k</span></div>
+                    <div class="kpi-note positive">Lebih efisien 5%</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Biaya energi</div>
+                    <div class="kpi-value">Rp 18,9 <span class="kpi-unit">jt</span></div>
+                    <div class="kpi-note neutral">6,1% dari total biaya</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-label">Margin bruto</div>
+                    <div class="kpi-value">26.4 <span class="kpi-unit">%</span></div>
+                    <div class="kpi-note negative">Butuh peningkatan 2%</div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Komponen Biaya</div>
+                                <div class="panel-subtitle">Rincian biaya batch terkini</div>
+                            </div>
+                            <button class="panel-action active">PO-0266</button>
+                        </div>
+
+                        <div class="cost-list">
+                            <div class="cost-row">
+                                <div class="cost-name">Bahan baku</div>
+                                <div class="cost-value">Rp1.890.000</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Tenaga kerja</div>
+                                <div class="cost-value">Rp780.000</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Energi</div>
+                                <div class="cost-value">Rp92.550</div>
+                            </div>
+                            <div class="cost-row">
+                                <div class="cost-name">Overhead</div>
+                                <div class="cost-value">Rp255.450</div>
+                            </div>
+                            <div class="cost-row cost-total">
+                                <div class="cost-name">Total HPP</div>
+                                <div class="cost-value">Rp3.018.000</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <div class="panel-title">Trend Biaya</div>
+                                <div class="panel-subtitle">Perbandingan 6 bulan terakhir</div>
+                            </div>
+                        </div>
+
+                        <div class="chart-container">
+                            <div class="chart">
+                                <div class="chart-column"><div class="chart-bar" style="height: 35%;"></div><div class="chart-bar energy" style="height: 25%;"></div><span class="chart-label">Jan</span></div>
+                                <div class="chart-column"><div class="chart-bar" style="height: 45%;"></div><div class="chart-bar energy" style="height: 30%;"></div><span class="chart-label">Feb</span></div>
+                                <div class="chart-column"><div class="chart-bar" style="height: 52%;"></div><div class="chart-bar energy" style="height: 38%;"></div><span class="chart-label">Mar</span></div>
+                                <div class="chart-column"><div class="chart-bar" style="height: 58%;"></div><div class="chart-bar energy" style="height: 49%;"></div><span class="chart-label">Apr</span></div>
+                                <div class="chart-column"><div class="chart-bar" style="height: 68%;"></div><div class="chart-bar energy" style="height: 58%;"></div><span class="chart-label">Mei</span></div>
+                                <div class="chart-column"><div class="chart-bar" style="height: 76%;"></div><div class="chart-bar energy" style="height: 64%;"></div><span class="chart-label">Jun</span></div>
+                            </div>
+                            <div class="legend">
+                                <div class="legend-item"><span class="legend-dot"></span>Biaya tetap</div>
+                                <div class="legend-item"><span class="legend-dot energy"></span>Biaya variabel</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (window.location.pathname.endsWith(href)) link.classList.add('active');
+            link.addEventListener('click', () => {
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.panel-action').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.panel-action').forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
