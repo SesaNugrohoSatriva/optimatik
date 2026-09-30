@@ -972,6 +972,226 @@ tbody tr:last-child td {
 }
 
 /* =========================
+   SYSTEM DIAGRAMS
+========================= */
+
+.diagram-section {
+    margin-bottom: 22px;
+}
+
+.diagram-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+.diagram-heading > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.diagram-index {
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.diagram-heading h2 {
+    font-size: 15px;
+}
+
+.diagram-heading p,
+.diagram-note {
+    color: var(--muted);
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.diagram-heading p {
+    max-width: 390px;
+    text-align: right;
+}
+
+.diagram-frame {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
+    background-image: radial-gradient(#dce6ed 0.7px, transparent 0.7px);
+    background-size: 16px 16px;
+}
+
+.system-diagram {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 820px;
+    padding: 18px;
+    overflow: visible;
+}
+
+.flowchart-diagram {
+    min-width: 900px;
+}
+
+.diagram-entity rect {
+    fill: #fff;
+    stroke: #47728e;
+    stroke-width: 1.5;
+}
+
+.diagram-entity text,
+.diagram-process text,
+.diagram-store text,
+.flow-node-text {
+    fill: #172b3d;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.diagram-process circle,
+.diagram-process ellipse {
+    fill: #e2f1fc;
+    stroke: #1672b8;
+    stroke-width: 1.7;
+}
+
+.diagram-process .svg-title {
+    font-size: 13px;
+}
+
+.diagram-entity .svg-small,
+.diagram-process .svg-small {
+    fill: #667b8e;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.diagram-store path {
+    fill: none;
+    stroke: #21805f;
+    stroke-width: 1.5;
+}
+
+.diagram-flow {
+    fill: none;
+    stroke: #47728e;
+    stroke-width: 1.5;
+}
+
+.flow-label,
+.flow-branch {
+    fill: #526b7e;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 10px;
+}
+
+.flow-branch {
+    fill: #1672b8;
+    font-weight: 750;
+}
+
+.flow-start,
+.flow-end {
+    fill: #e0f3eb;
+    stroke: #21805f;
+    stroke-width: 1.5;
+}
+
+.flow-step,
+.flow-result {
+    fill: #fff;
+    stroke: #47728e;
+    stroke-width: 1.5;
+}
+
+.flow-iot {
+    fill: #e2f1fc;
+    stroke: #1672b8;
+}
+
+.flow-hold {
+    fill: #f9e8e6;
+    stroke: #ba514c;
+    stroke-width: 1.5;
+}
+
+.flow-decision {
+    fill: #fff4d9;
+    stroke: #c68a21;
+    stroke-width: 1.5;
+}
+
+.flow-node-sub {
+    fill: #667b8e;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 10px;
+}
+
+.diagram-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 9px 2px 0;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.diagram-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.diagram-legend i {
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    border: 1.5px solid #47728e;
+    background: #fff;
+}
+
+.diagram-legend .legend-process {
+    border-color: var(--accent);
+    border-radius: 50%;
+    background: var(--accent-soft);
+}
+
+.diagram-legend .legend-store {
+    border-right: 0;
+    border-color: var(--green);
+    background: transparent;
+}
+
+.diagram-legend .legend-flow {
+    width: 18px;
+    height: 0;
+    border: 0;
+    border-top: 1.5px solid #47728e;
+    background: transparent;
+}
+
+.diagram-legend .legend-step {
+    border-radius: 3px;
+}
+
+.diagram-legend .legend-decision {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-color: #c68a21;
+    background: #fff4d9;
+}
+
+.diagram-note {
+    margin-top: 18px;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -1064,6 +1284,17 @@ tbody tr:last-child td {
 
     .user-area {
         margin-top: 18px;
+    }
+
+    .diagram-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .diagram-heading p {
+        max-width: none;
+        text-align: left;
     }
 
     .kpi-grid {
