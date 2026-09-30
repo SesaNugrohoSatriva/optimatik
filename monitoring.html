@@ -65,10 +65,10 @@
         <main class="main">
             <header class="topbar">
                 <div>
-                    <div class="eyebrow">Monitoring</div>
-                    <h1 class="page-title">Monitoring Energi Mesin</h1>
+                    <div class="eyebrow">Industrial IoT · Monitoring</div>
+                    <h1 class="page-title">Telemetry & Kondisi Mesin</h1>
                     <p class="page-description">
-                        Pantau daya, energi, status operasi, dan estimasi biaya listrik setiap mesin produksi.
+                        Pantau data sensor, konektivitas perangkat, daya, energi, dan status operasi mesin produksi.
                     </p>
                 </div>
 
@@ -95,7 +95,35 @@
                     <span>Tarif listrik <small>Rp/kWh</small></span>
                     <input id="tariff-input" type="number" min="0" step="1" value="1444.70" inputmode="decimal">
                 </label>
-                <div class="meter-status"><span class="live-dot"></span>Meter simulasi <strong id="meter-config">3 fase · 400 V · Modbus RTU</strong></div>
+                <div class="meter-status"><span class="live-dot"></span>Gateway IoT simulasi <strong id="meter-config">3 fase · 400 V · Modbus RTU</strong></div>
+            </section>
+
+            <section class="panel iot-panel" aria-labelledby="iot-heading">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title" id="iot-heading">Konektivitas perangkat IoT</div>
+                        <div class="panel-subtitle">Status node dan telemetri terakhir · data simulasi</div>
+                    </div>
+                    <div class="iot-connectivity"><span class="live-dot"></span>Gateway online</div>
+                </div>
+                <div class="iot-device-grid">
+                    <div class="iot-device">
+                        <div class="iot-device-top"><span class="iot-device-icon">kW</span><span class="iot-state"><i></i>Online</span></div>
+                        <strong>Power meter</strong><span>Modbus RTU · 1,2 dtk lalu</span>
+                    </div>
+                    <div class="iot-device">
+                        <div class="iot-device-top"><span class="iot-device-icon">VIB</span><span class="iot-state"><i></i>Online</span></div>
+                        <strong>Sensor vibrasi</strong><span>VIB-R06 · 2,4 mm/s</span>
+                    </div>
+                    <div class="iot-device">
+                        <div class="iot-device-top"><span class="iot-device-icon">°C</span><span class="iot-state"><i></i>Normal</span></div>
+                        <strong>Sensor suhu</strong><span>Motor utama · 42,8 °C</span>
+                    </div>
+                    <div class="iot-device">
+                        <div class="iot-device-top"><span class="iot-device-icon">PLC</span><span class="iot-state"><i></i>Sinkron</span></div>
+                        <strong>Kontroler mesin</strong><span>PLC-R06 · siklus 1842</span>
+                    </div>
+                </div>
             </section>
 
             <section class="kpi-grid">

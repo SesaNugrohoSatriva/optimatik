@@ -411,6 +411,195 @@ select {
     gap: 9px;
     font-size: 20px;
 }
+
+.mes-panel {
+    border-top: 3px solid var(--accent);
+}
+
+.mes-summary {
+    display: grid;
+    grid-template-columns: minmax(180px, 1.1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    padding: 2px 0 18px;
+}
+
+.mes-progress-heading,
+.mes-metrics,
+.mes-stage,
+.iot-device-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mes-progress-heading {
+    margin-bottom: 9px;
+    font-size: 10px;
+}
+
+.mes-progress-heading span,
+.mes-metrics span {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.mes-progress-track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--surface-soft);
+}
+
+.mes-progress-track span {
+    display: block;
+    width: 68.6%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+}
+
+.mes-metrics {
+    gap: 12px;
+}
+
+.mes-metrics div {
+    display: grid;
+    gap: 6px;
+}
+
+.mes-metrics strong {
+    font-size: 11px;
+}
+
+.mes-stages {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--border);
+}
+
+.mes-stage {
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    padding: 14px 12px 0 0;
+}
+
+.mes-stage + .mes-stage {
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+}
+
+.mes-stage > span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.mes-stage strong {
+    font-size: 9px;
+}
+
+.mes-stage small {
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.mes-stage.complete > span,
+.mes-stage.complete small {
+    color: var(--green);
+}
+
+.mes-stage.current > span,
+.mes-stage.current strong {
+    color: var(--accent);
+}
+
+.iot-panel {
+    margin-bottom: 18px;
+}
+
+.iot-connectivity,
+.iot-state {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.iot-connectivity .live-dot {
+    width: 7px;
+    height: 7px;
+}
+
+.iot-device-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--border);
+}
+
+.iot-device {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+    min-width: 0;
+    padding: 13px 14px 2px 0;
+}
+
+.iot-device + .iot-device {
+    padding-left: 14px;
+    border-left: 1px solid var(--border);
+}
+
+.iot-device-top {
+    margin-bottom: 2px;
+}
+
+.iot-device-icon {
+    display: grid;
+    min-width: 27px;
+    height: 24px;
+    padding: 0 5px;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--dark);
+    font-size: 8px;
+    font-weight: 750;
+}
+
+.iot-state {
+    gap: 5px;
+    font-size: 8px;
+}
+
+.iot-state i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.iot-device > strong {
+    overflow: hidden;
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.iot-device > span:last-child {
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* =========================
    CHART
 ========================= */
@@ -798,6 +987,26 @@ tbody tr:last-child td {
     .monitoring-controls {
         flex-wrap: wrap;
     }
+
+    .mes-summary {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .iot-device-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .iot-device:nth-child(3) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .iot-device:nth-child(n + 3) {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+    }
 }
 
 @media (max-width: 750px) {
@@ -860,6 +1069,20 @@ tbody tr:last-child td {
     .kpi-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .mes-stages {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 12px;
+    }
+
+    .mes-stage:nth-child(3) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .mes-stage:nth-child(n + 3) {
+        border-top: 1px solid var(--border);
+    }
 }
 
 @media (max-width: 480px) {
@@ -869,5 +1092,11 @@ tbody tr:last-child td {
 
     .page-title {
         font-size: 25px;
+    }
+
+    .mes-metrics {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
     }
 }
